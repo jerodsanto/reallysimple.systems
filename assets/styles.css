@@ -72,7 +72,7 @@ hr {
   mask-size: 100% 100%;
 }
 
-.topbar {
+header {
   padding: 1.75rem 2rem 0;
   display: flex;
   align-items: center;
@@ -107,7 +107,7 @@ hr {
 .content {
   max-width: 750px;
   margin: 0 auto;
-  padding: 2rem 2rem 6rem;
+  padding: 2rem;
 }
 
 .brand {
@@ -123,6 +123,7 @@ hr {
 
 .brand em {
   font-style: inherit;
+  font-size: larger;
   color: var(--accent);
 }
 
@@ -309,12 +310,22 @@ hr {
   margin-top: 0.6rem;
 }
 
+footer {
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+.period {
+  font-size: x-large;
+  color: var(--accent);
+}
+
 @media (max-width: 600px) {
-  .topbar {
+  header {
     padding: 2rem 1.25rem 0;
   }
   .content {
-    padding: 2.5rem 1.25rem 4rem;
+    padding: 2.5rem 1.25rem 2rem;
   }
   .lets-talk {
     padding: 0.55rem 1.1rem;
