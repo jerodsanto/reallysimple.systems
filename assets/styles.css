@@ -217,9 +217,17 @@ hr {
   display: block;
   width: 200px;
   max-width: 100%;
-  height: auto;
+  aspect-ratio: 256 / 64;
   margin: 0.25rem 0;
-  color: var(--ink);
+  background-color: var(--ink);
+  -webkit-mask-image: url("/assets/signature.png");
+  mask-image: url("/assets/signature.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: right center;
+  mask-position: right center;
 }
 
 .services {
