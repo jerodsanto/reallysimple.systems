@@ -187,25 +187,19 @@ header {
 
 .letter u {
   text-decoration: none;
-  position: relative;
   padding-bottom: 3px;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4.4 Q 30 3.4 60 4.6 T 120 3.9 T 180 4.5 T 240 4.4' stroke='%237a2e2e' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 240px 7px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
-.letter u::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 7px;
-  background-color: var(--accent);
-  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4.4 Q 30 3.4 60 4.6 T 120 3.9 T 180 4.5 T 240 4.4' stroke='black' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4.4 Q 30 3.4 60 4.6 T 120 3.9 T 180 4.5 T 240 4.4' stroke='black' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
-  -webkit-mask-repeat: repeat-x;
-  mask-repeat: repeat-x;
-  -webkit-mask-size: 240px 7px;
-  mask-size: 240px 7px;
-  pointer-events: none;
+@media (prefers-color-scheme: dark) {
+  .letter u {
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4.4 Q 30 3.4 60 4.6 T 120 3.9 T 180 4.5 T 240 4.4' stroke='%23e08a7a' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  }
 }
 
 .signoff {
@@ -310,6 +304,242 @@ header {
   margin-top: 0.6rem;
 }
 
+.offer {
+  margin-top: 1rem;
+}
+
+.offer h2,
+.phases h2,
+.fit h2 {
+  font-family: "Playpen Sans", cursive;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+
+.offer .tagline {
+  font-family: "Playpen Sans", cursive;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
+}
+
+.offer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+}
+
+.offer-list li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 2rem;
+  font-size: 1rem;
+  color: var(--ink);
+  border-bottom: 1px dashed var(--rule);
+}
+
+.offer-list li:last-child {
+  border-bottom: none;
+}
+
+.offer-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.price-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  margin: 0 0 1.5rem;
+  font-family: "Playpen Sans", cursive;
+  font-size: 1.1rem;
+}
+
+.price-line .price {
+  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.guarantee {
+  margin: 1.5rem 0;
+  padding: 1.1rem 1.25rem;
+  border: 2px dashed var(--accent);
+  border-radius: 12px;
+  background: rgba(122, 46, 46, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  .guarantee {
+    background: rgba(224, 138, 122, 0.06);
+  }
+}
+
+.guarantee p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.guarantee p + p {
+  margin-top: 0.5rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.guarantee strong {
+  color: var(--accent);
+}
+
+.phases {
+  margin-top: 2rem;
+}
+
+.phase {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.25rem 0;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.phase:last-child {
+  border-bottom: none;
+}
+
+.phase-number {
+  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  text-align: center;
+}
+
+.phase-content h3 {
+  margin: 0 0 0.4rem;
+  font-family: "Playpen Sans", cursive;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.phase-content h3 .duration {
+  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-left: 0.5rem;
+}
+
+.phase-content p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.phase-content p + p {
+  margin-top: 0.5rem;
+}
+
+.fit {
+  margin-top: 2rem;
+}
+
+.fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.fit-grid h3 {
+  margin: 0 0 0.6rem;
+  font-family: "Playpen Sans", cursive;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.fit-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.fit-grid li {
+  padding: 0.3rem 0 0.3rem 1.3rem;
+  position: relative;
+}
+
+.fit-grid .yes li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.fit-grid .no li::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.cta-block {
+  text-align: center;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1.1rem 2.2rem;
+  background: var(--accent);
+  color: var(--paper);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  transition:
+    background 120ms ease,
+    color 120ms ease,
+    transform 120ms ease,
+    box-shadow 120ms ease;
+  box-shadow: 0 2px 8px rgba(122, 46, 46, 0.2);
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(122, 46, 46, 0.25);
+}
+
+.cta-note {
+  margin: 0.9rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
 footer {
   text-align: center;
   padding-bottom: 6rem;
@@ -349,5 +579,30 @@ footer {
   .services li a {
     grid-template-columns: 1fr;
     gap: 0.25rem;
+  }
+
+  .offer h2,
+  .phases h2,
+  .fit h2 {
+    font-size: 1.3rem;
+  }
+
+  .phase {
+    grid-template-columns: 44px 1fr;
+    gap: 1rem;
+  }
+
+  .phase-number {
+    font-size: 1.8rem;
+  }
+
+  .fit-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .cta-button {
+    padding: 0.95rem 1.5rem;
+    font-size: 0.95rem;
   }
 }
