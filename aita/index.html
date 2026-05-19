@@ -99,10 +99,8 @@
             A custom report with 3–5 recommendations specific to
             <em>your</em> business
           </li>
-          <li>A 30-minute review call where I show you what I found</li>
-          <li>
-            A 4-day quick-start implementation plan to get you up and running
-          </li>
+          <li>A 30-minute review call to discuss my findings</li>
+          <li>A quick-start implementation plan to get you up and running</li>
         </ul>
 
         <p class="price-line">
@@ -134,10 +132,6 @@
               goes — where the time disappears, what tasks you dread, what piles
               up waiting on you specifically.
             </p>
-            <p>
-              The point isn't to pitch solutions. It's to surface the problems
-              worth solving.
-            </p>
           </div>
         </div>
 
@@ -146,10 +140,9 @@
           <div class="phase-content">
             <h3>Analysis</h3>
             <p>
-              I run the full transcript through a process I've refined for
-              spotting time sinks and matching them to production-ready AI tools
-              and techniques. Patterns emerge that you'd never catch in real
-              time.
+              I run the transcript through a process I've refined for spotting
+              pain points and matching them to ready-to-use AI tools and
+              techniques. Patterns emerge that you'd never catch in real time.
             </p>
             <p>
               Then I add my own experience and trim anything that feels like a
@@ -167,7 +160,7 @@
             <p>
               An executive summary, a priority matrix (what to do first, second,
               and save for later), specific recommendations with implementation
-              steps, a 4-day quick-start plan, and a financial impact breakdown.
+              steps, a quick-start plan, and a financial impact breakdown.
             </p>
           </div>
         </div>
@@ -202,7 +195,7 @@
               </li>
               <li>Want specific answers, not another listicle</li>
               <li>
-                Would rather pay an expert than wade through 500 YouTube videos
+                Would rather pay an expert than wade through 900 YouTube videos
               </li>
             </ul>
           </div>
@@ -224,9 +217,7 @@
         >
           Pay $499 &amp; Book Your Discovery Call</a
         >
-        <p class="cta-note">
-          Full refund if we don't surface 3+ actionable wins.
-        </p>
+        <p class="cta-note">Full refund if we don't surface 3+ wins</p>
       </section>
 
       <section class="signoff">
@@ -246,11 +237,13 @@
       (function () {
         var code = new URLSearchParams(window.location.search).get("code");
         if (!code) return;
-        document.querySelectorAll('a[href*="stripe.com"]').forEach(function (a) {
-          var url = new URL(a.href);
-          url.searchParams.set("prefilled_promo_code", code);
-          a.href = url.toString();
-        });
+        document
+          .querySelectorAll('a[href*="stripe.com"]')
+          .forEach(function (a) {
+            var url = new URL(a.href);
+            url.searchParams.set("prefilled_promo_code", code);
+            a.href = url.toString();
+          });
       })();
     </script>
   </body>

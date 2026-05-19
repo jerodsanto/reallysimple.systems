@@ -511,6 +511,7 @@ u::after {
 .cta-block {
   text-align: center;
   margin: 2.5rem 0 1.5rem;
+  text-wrap: pretty;
 }
 
 .cta-button {
