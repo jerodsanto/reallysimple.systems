@@ -241,5 +241,17 @@
     </main>
 
     <footer><span class="period">&bull;</span></footer>
+
+    <script>
+      (function () {
+        var code = new URLSearchParams(window.location.search).get("code");
+        if (!code) return;
+        document.querySelectorAll('a[href*="stripe.com"]').forEach(function (a) {
+          var url = new URL(a.href);
+          url.searchParams.set("prefilled_promo_code", code);
+          a.href = url.toString();
+        });
+      })();
+    </script>
   </body>
 </html>
